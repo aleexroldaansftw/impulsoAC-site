@@ -8,7 +8,7 @@ import React, { useEffect, useRef, useState } from "react";
 */
 
 const SECTIONS = [
-  { id: "top", label: "Inicio" },
+  { id: "home", label: "Inicio" },
   { id: "mision-vision", label: "Misión/Visión" },
   { id: "programas-deportivos", label: "Deportivos" },
   { id: "programas-sociales", label: "Sociales" },
@@ -18,7 +18,8 @@ const SECTIONS = [
 
 export default function Header() {
   const headerRef = useRef(null);
-  const [active, setActive] = useState("top");
+  const [active, setActive] = useState("home");
+
 
   useEffect(() => {
     const observerOptions = {
@@ -48,7 +49,7 @@ export default function Header() {
       <div className="container">
         {/* LOGO / BRAND */}
         <a
-          href="#top"
+          href="#home"
           className="brand-left"
           aria-label="Ir al inicio"
           style={{ display: "flex", alignItems: "center", gap: 12 }}
