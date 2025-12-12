@@ -751,3 +751,144 @@ box-shadow: 0 6px 18px rgba(212,175,55,0.14); transition: transform .12s ease, b
   .visit-content h2 { font-size: 28px; }
 }
 
+/* =====================================================
+RESPONSIVE GLOBAL (solo ajustes, sin romper desktop)
+===================================================== */
+
+/* Evitar scroll horizontal en móviles */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER RESPONSIVE ---------- */
+@media (max-width: 860px) {
+  .header .container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px var(--gutter);
+  }
+
+  .brand-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+}
+
+/* Ajuste espacio header en móvil */
+@media (max-width: 640px) {
+  main {
+    padding-top: 120px;
+  }
+}
+
+/* ---------- HERO RESPONSIVE ---------- */
+@media (max-width: 860px) {
+  .hero {
+    padding: 36px 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p.lead {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p.lead {
+    font-size: 15px;
+  }
+}
+
+/* ---------- PROGRAMAS ---------- */
+@media (max-width: 860px) {
+  .program-section {
+    padding: 18px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 200px;
+  }
+}
+
+/* ---------- INFO TILES (Misión / Visión) ---------- */
+@media (max-width: 640px) {
+  .info-tiles {
+    flex-direction: column;
+  }
+
+  .tile {
+    min-width: 100%;
+  }
+}
+
+/* ---------- DONATE ---------- */
+@media (max-width: 640px) {
+  .donate {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .donate .donate-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- VISIT US ---------- */
+@media (max-width: 860px) {
+  .visit-content {
+    text-align: center;
+  }
+
+  .visit-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+@media (max-width: 640px) {
+  .footer-desc {
+    max-width: 100%;
+  }
+
+  .footer-nav,
+  .footer-contact {
+    text-align: center;
+  }
+}
+
+/* ---------- CONTACT CARDS ---------- */
+@media (max-width: 640px) {
+  .contact-card {
+    box-shadow: 0 12px 32px rgba(16,24,40,0.08);
+  }
+
+  .contact-actions {
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
