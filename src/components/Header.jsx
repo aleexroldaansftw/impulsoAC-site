@@ -8,13 +8,14 @@ import React, { useEffect, useRef, useState } from "react";
 */
 
 const SECTIONS = [
-  { id: "home", label: "Inicio" },
+  { id: "top", label: "Inicio" },
   { id: "mision-vision", label: "Misión/Visión" },
   { id: "programas-deportivos", label: "Deportivos" },
   { id: "programas-sociales", label: "Sociales" },
-  { id: "visit-us", label: "Visítanos" }, // asegúrate que tu sección tenga id="visit-us"
+  { id: "visit-us", label: "Visítanos" },
   { id: "contacto", label: "Contacto" }
 ];
+
 
 export default function Header() {
   const headerRef = useRef(null);
@@ -71,7 +72,8 @@ export default function Header() {
       <div className="container">
         <div
   style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer" }}
-  onClick={(e) => handleNavClick(e, "home")}
+  onClick={(e) => handleNavClick(e, "top")}
+
   role="button"
 >
   <div className="brand-left">

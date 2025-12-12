@@ -10,6 +10,8 @@ import VisitUs from "./components/VisitUs";   // ← IMPORTANTE: importamos el n
 export default function App(){
   return (
     <>
+    <div id="top" style={{ position: "absolute", top: 0 }} />
+
       <Header />
       <main>
         <div className="page-inner">
