@@ -49,13 +49,15 @@ export default function Header() {
   function handleNavClick(e, id) {
     // allow normal ctrl/cmd+click etc.
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-    e.preventDefault();
     const target = document.getElementById(id);
-    if (!target) {
-      // si no existe, fallback al href
-      window.location.hash = id;
-      return;
-    }
+
+// 👉 SI NO EXISTE, DEJA QUE EL NAVEGADOR HAGA SU TRABAJO
+if (!target) {
+  return;
+}
+
+e.preventDefault();
+
     const headerHeight = headerRef.current?.offsetHeight || 72;
     const targetY = window.scrollY + target.getBoundingClientRect().top - headerHeight - 16; // -16 breathing
     window.scrollTo({ top: targetY, behavior: "smooth" });
