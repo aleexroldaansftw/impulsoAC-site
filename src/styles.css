@@ -417,6 +417,14 @@ justify-items:center;
   overflow: hidden;
 }
 
+.gallery {
+  overflow: hidden;
+}
+
+.gallery img {
+  display: block;
+}
+
 /* Program text blocks for no-images case
 --- CORRECCIÓN: hacer que las secciones sin imágenes también sean doradas y texto blanco */
 .program-section.no-images {
